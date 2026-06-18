@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thiziri Dib — Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Fond 3D animé -->
+<canvas id="bgCanvas"></canvas>
+
+<!-- Bouton thème -->
+<button id="themeBtn" onclick="toggleTheme()">
+  <i class="fas fa-moon"></i> Mode clair
+</button>
+
+
+<!-- ==================== HOME ==================== -->
+<section class="section active" id="sec-home">
+  <div class="hero">
+
+    <!-- Avatar avec anneaux orbitaux -->
+    <div class="hero-3d">
+      <div class="orbit orbit1"><div class="orbit-dot"></div></div>
+      <div class="orbit orbit2"><div class="orbit-dot2"></div></div>
+      <div class="orbit orbit3"></div>
+      <div class="hero-avatar">
+        <!--
+          💡 POUR AJOUTER TA PHOTO :
+          Remplace le div .av-initials par :
+          <img src="images/photo.jpg" alt="Thiziri Dib">
+        -->
+        <div class="av-initials">TD</div>
+      </div>
+    </div>
+
+    <!-- Texte héro -->
+    <div class="hero-text">
+      <div class="badge"><i class="fas fa-code"></i> Web Developer</div>
+      <h1>Bonjour, je suis<br><span>Thiziri Dib</span></h1>
+      <p>Développeuse web passionnée basée à Montréal. Je transforme des idées en interfaces
+         interactives, élégantes et performantes. Le code, c'est l'art de rendre l'invisible visible.</p>
+      <div class="btn-group">
+        <button class="btn" onclick="cvClick(this)">
+          <i class="fas fa-download"></i> Télécharger CV
+        </button>
+        <button class="btn out" onclick="goTo('contact')">
+          <i class="fas fa-paper-plane"></i> Me contacter
+        </button>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="stat-n">3+</div><div class="stat-l">Années</div></div>
+        <div class="stat"><div class="stat-n">15+</div><div class="stat-l">Projets</div></div>
+        <div class="stat"><div class="stat-n">6</div><div class="stat-l">Langages</div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ==================== À PROPOS ==================== -->
+<section class="section" id="sec-about">
+  <p class="sec-title"><i class="fas fa-user-astronaut"></i> À propos</p>
+  <p class="sec-sub">Développeuse web passionnée — Montréal, Canada</p>
+
+  <div class="about-wrap">
+
+    <!-- Carte avatar -->
+    <div class="avatar-card">
+      <div class="avatar-ring">
+        <!--
+          💡 POUR AJOUTER TA PHOTO :
+          Remplace .av-sm par :
+          <img src="images/photo.jpg" alt="Thiziri Dib">
+        -->
+        <div class="av-sm">TD</div>
+      </div>
+      <h2>Thiziri Dib</h2>
+      <h3>Développeuse Web</h3>
+      <p>Passionnée par la création d'interfaces élégantes. Toujours en quête de nouvelles connaissances.</p>
+      <button class="btn" style="width:100%;justify-content:center" onclick="cvClick(this)">
+        <i class="fas fa-file-alt"></i> Télécharger CV
+      </button>
+      <div class="avatar-social">
+        <a href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:dibthiziri4@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <!-- Grille infos -->
+    <div class="info-grid">
+
+      <div class="icard">
+        <h4><i class="fas fa-id-card"></i> Informations</h4>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> Montréal, Canada</li>
+          <li><i class="fas fa-envelope"></i> dibthiziri4@gmail.com</li>
+          <li><i class="fas fa-phone"></i> +1 514-609-7265</li>
+        </ul>
+      </div>
+
+      <div class="icard">
+        <h4><i class="fas fa-bullseye"></i> Objectif</h4>
+        <p>Je recherche un poste en développement front-end pour créer des interfaces
+           modernes et accessibles au sein d'une équipe dynamique.</p>
+      </div>
+
+      <div class="icard full">
+        <h4><i class="fas fa-laptop-code"></i> Compétences</h4>
+        <div class="skill-logos">
+          <div class="skill-logo"><i class="devicon-html5-plain" style="color:#e34c26"></i><span>HTML</span></div>
+          <div class="skill-logo"><i class="devicon-css3-plain" style="color:#264de4"></i><span>CSS</span></div>
+          <div class="skill-logo"><i class="devicon-javascript-plain" style="color:#f7df1e"></i><span>JS</span></div>
+          <div class="skill-logo"><i class="devicon-react-original" style="color:#61dbfb"></i><span>React</span></div>
+          <div class="skill-logo"><i class="devicon-python-plain" style="color:#3572A5"></i><span>Python</span></div>
+          <div class="skill-logo"><i class="devicon-php-plain" style="color:#777bb4"></i><span>PHP</span></div>
+          <div class="skill-logo"><i class="devicon-figma-plain" style="color:#f24e1e"></i><span>Figma</span></div>
+          <div class="skill-logo"><i class="devicon-git-plain" style="color:#f34f29"></i><span>Git</span></div>
+          <div class="skill-logo"><i class="devicon-github-original" style="color:#fff"></i><span>GitHub</span></div>
+        </div>
+      </div>
+
+      <div class="icard">
+        <h4><i class="fas fa-heart"></i> Loisirs</h4>
+        <ul>
+          <li><i class="fas fa-headphones"></i> Musique lo-fi pour coder</li>
+          <li><i class="fas fa-pencil-ruler"></i> UI Design sur Figma</li>
+          <li><i class="fas fa-book-open"></i> Veille technologique</li>
+        </ul>
+      </div>
+
+      <div class="icard quote">
+        <p style="color:var(--text2)">
+          "<span style="color:var(--cyan)">Le code</span>, c'est l'art de rendre
+          l'<span style="color:var(--cyan)">invisible visible</span>"
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== SERVICES ==================== -->
+<section class="section" id="sec-services">
+  <p class="sec-title"><i class="fas fa-wand-magic-sparkles"></i> Mes services</p>
+  <p class="sec-sub">Ce que je peux créer pour vous</p>
+
+  <div class="svc-grid">
+
+    <div class="svc-card">
+      <div class="svc-icon"><i class="fas fa-layer-group"></i></div>
+      <h3>Développement Front-End</h3>
+      <p>Interfaces web élégantes, modernes et performantes avec les technologies actuelles.</p>
+      <div class="tech-row">
+        <div class="tech-logo"><i class="devicon-html5-plain" style="color:#e34c26"></i></div>
+        <div class="tech-logo"><i class="devicon-css3-plain" style="color:#264de4"></i></div>
+        <div class="tech-logo"><i class="devicon-javascript-plain" style="color:#f7df1e"></i></div>
+        <div class="tech-logo"><i class="devicon-react-original" style="color:#61dbfb"></i></div>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-icon"><i class="fas fa-mobile-screen-button"></i></div>
+      <h3>Responsive Design</h3>
+      <p>Sites adaptatifs et fluides sur tous les écrans, du mobile au desktop.</p>
+      <div class="tech-row">
+        <div class="tech-logo"><i class="devicon-css3-plain" style="color:#264de4"></i></div>
+        <div class="tech-logo"><i class="devicon-html5-plain" style="color:#e34c26"></i></div>
+        <div class="tech-logo"><i class="devicon-github-original"></i></div>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-icon"><i class="fas fa-drafting-compass"></i></div>
+      <h3>Intégration Figma</h3>
+      <p>Conversion fidèle de maquettes Figma & XD en code propre et pixel-perfect.</p>
+      <div class="tech-row">
+        <div class="tech-logo"><i class="devicon-figma-plain" style="color:#f24e1e"></i></div>
+        <div class="tech-logo"><i class="devicon-html5-plain" style="color:#e34c26"></i></div>
+        <div class="tech-logo"><i class="devicon-css3-plain" style="color:#264de4"></i></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ==================== PARCOURS ==================== -->
+<section class="section" id="sec-resume">
+  <p class="sec-title"><i class="fas fa-graduation-cap"></i> Mon parcours</p>
+  <p class="sec-sub">Formation et expériences professionnelles</p>
+
+  <div class="resume-wrap">
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('etudes', this)">Études & Formations</button>
+      <button class="tab"        onclick="switchTab('xp', this)">Expérience Pro</button>
+    </div>
+
+    <!-- ÉTUDES -->
+    <div id="tab-etudes" class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h3>2023 — Master Génie Logiciel</h3>
+          <p>Université Abderrahmane Mira, Bejaia, Algérie</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h3>2022 — Formation Python</h3>
+          <p>École ATS (Algérie Training Services), Bejaia</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h3>2021 — Formation Création de site web</h3>
+          <p>École ATS, Bejaia</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h3>2021 — Licence Système Informatique</h3>
+          <p>Université Abderrahmane Mira, Bejaia</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h3>2019 — Formation Bureautique</h3>
+          <p>Nia School Corporation, Bejaia</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h3>2018 — Langue Anglaise</h3>
+          <p>Bilou School, El-Kseur</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h3>2018 — Bac Sciences Expérimentales</h3>
+          <p>Lycée Mesbah Hamid, El-Kseur</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXPÉRIENCES -->
+    <div id="tab-xp" class="timeline" style="display:none">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h3>Expériences à venir</h3>
+          <p>Cette section sera mise à jour avec tes expériences professionnelles.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ==================== CONTACT ==================== -->
+<section class="section" id="sec-contact">
+  <p class="sec-title"><i class="fas fa-paper-plane"></i> Contact</p>
+  <p class="sec-sub">Une opportunité ou juste dire bonjour ?</p>
+
+  <div class="contact-wrap">
+
+    <!-- Formulaire -->
+    <div class="form-col">
+      <input type="text"   id="cname"  placeholder="Votre nom">
+      <input type="email"  id="cemail" placeholder="Votre email">
+      <textarea rows="5"   id="cmsg"   placeholder="Votre message..."></textarea>
+      <button class="btn" id="sendBtn" onclick="sendMsg()">
+        <i class="fas fa-paper-plane"></i> Envoyer le message
+      </button>
+      <div class="success-msg" id="okMsg">
+        <i class="fas fa-check-circle"></i> Message envoyé avec succès !
+      </div>
+    </div>
+
+    <!-- Liens + Globe 3D -->
+    <div class="info-col">
+      <div class="clink" onclick="window.location='mailto:dibthiziri4@gmail.com'">
+        <div class="clink-icon"><i class="fas fa-envelope"></i></div>
+        <div class="clink-text"><p>Email</p><p>dibthiziri4@gmail.com</p></div>
+      </div>
+      <div class="clink">
+        <div class="clink-icon"><i class="fas fa-phone"></i></div>
+        <div class="clink-text"><p>Téléphone</p><p>+1 514-609-7265</p></div>
+      </div>
+      <div class="clink">
+        <div class="clink-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="clink-text"><p>Localisation</p><p>Montréal, Canada</p></div>
+      </div>
+      <div class="clink" onclick="window.open('https://github.com','_blank')">
+        <div class="clink-icon"><i class="fab fa-github"></i></div>
+        <div class="clink-text"><p>GitHub</p><p>Voir mes projets</p></div>
+      </div>
+      <div class="clink" onclick="window.open('https://linkedin.com','_blank')">
+        <div class="clink-icon"><i class="fab fa-linkedin"></i></div>
+        <div class="clink-text"><p>LinkedIn</p><p>Mon profil professionnel</p></div>
+      </div>
+
+      <!-- Globe Three.js -->
+      <div class="globe-contact-wrap">
+        <canvas id="contactGlobe" width="180" height="180"></canvas>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ==================== NAVBAR ==================== -->
+<nav>
+  <button class="active" id="nb-home"     onclick="goTo('home')">    <i class="fas fa-house"></i>                Accueil</button>
+  <button id="nb-about"                   onclick="goTo('about')">   <i class="fas fa-user"></i>                 À propos</button>
+  <button id="nb-services"                onclick="goTo('services')"><i class="fas fa-wand-magic-sparkles"></i>  Services</button>
+  <button id="nb-resume"                  onclick="goTo('resume')">  <i class="fas fa-graduation-cap"></i>       Parcours</button>
+  <button id="nb-contact"                 onclick="goTo('contact')"> <i class="fas fa-paper-plane"></i>          Contact</button>
+</nav>
+
+
+<!-- ==================== SCRIPTS ==================== -->
+<script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
+<script src="js/three-scene.js"></script>
+
+</body>
+</html>
